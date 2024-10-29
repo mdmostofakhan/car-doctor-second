@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import ServicesCard from "./ServicesCard";
 
 const Services = () => {
-  const [services, SetServices] = useState([]);
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/services")
       .then((res) => res.json())
-      .then((data) => SetServices(data));
+      .then((data) => setServices(data));
   }, []);
 
   return (

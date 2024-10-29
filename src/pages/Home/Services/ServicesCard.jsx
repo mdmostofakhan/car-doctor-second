@@ -2,7 +2,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ServicesCard = ({ service }) => {
-  const { _id, title, img, price } = service;
+  const { title, img, price } = service;
 
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
@@ -15,7 +15,7 @@ const ServicesCard = ({ service }) => {
           <p>Price: $ {price}</p>
         </div>
         <div className="card-actions justify-end">
-          <Link to={`/checkout/${_id}`}>
+          <Link>
             <button>
               <FaArrowRight />
             </button>
